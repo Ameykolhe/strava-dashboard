@@ -58,5 +58,9 @@ for activity_file_gpx in "$DATA_DIR/activities"/*.gpx; do
   fi
 done
 
+# Process activity files
 python3 src/process_data.py
+
+# Remove temp files
+rm -r "$DATA_DIR/activities"
 
